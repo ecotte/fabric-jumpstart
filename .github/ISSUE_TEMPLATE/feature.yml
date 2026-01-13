@@ -1,7 +1,9 @@
 name: "Feature"
 description: "Request a new capability or enhancement to the Jumpstart framework or an existing Jumpstart"
+title: "[Feature]: "
 labels:
-  - "type: feature"
+  - "Feature-Request"
+  - "Needs-Triage"
 body:
   - type: markdown
     attributes:

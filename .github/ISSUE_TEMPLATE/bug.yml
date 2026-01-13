@@ -1,64 +1,55 @@
-name: "Bug"
-description: "Report a defect"
-labels:
-  - "type: bug"
+name: Bug
+description: File a bug report or an issue
+title: "[Bug]: "
+labels: ["Bug", "Needs-Triage"]
 body:
   - type: markdown
     attributes:
-      value: "Provide enough detail to reproduce and verify the fix."
+      value: |
+        Thanks for taking the time to fill out this issue!
+
+        If your bug report is related to documentation, we kindly ask you to open an issue in our [documentation repository](https://github.com/microsoft/fabric-jumpstart-docs).
+
+        The intent of this "Bug report" template is to address issues related to the various Fabric Jumpstart solutions. The Fabric Jumpstart team does not handle and/or support Fabric upstream core product related issues, bugs and feature requests and will try to assist on a best effort basis. For a core product issue or feature request/feedback, please see the [Microsoft Fabric support page](https://support.fabric.microsoft.com/).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen and how to reproduce?
+      placeholder: Tell us what you see! If applicable, add screenshots to help explain your problem.
+    validations:
+      required: true
   - type: input
-    id: title
+    id: jumpstart-id
     attributes:
-      label: Bug title
-      placeholder: "Install fails when workspace_id missing"
+      label: Jumpstart ID
+      description: Please share the ID of the Jumpstart solution you are having issues with.
+      placeholder: i.e. spark-rti-monitoring
     validations:
-      required: true
-  - type: textarea
-    id: summary
+      required: true      
+  - type: dropdown
+    id: deployment-method
     attributes:
-      label: Summary
-      description: What is happening and what you expected instead
+      label: Runtime
+      multiple: true
+      description: What runtime are you using to install the Jumpstart solution?
+      options:
+        - Fabric Notebook
+        - Local Python Environment
+        - Other
     validations:
-      required: true
-  - type: textarea
-    id: repro
-    attributes:
-      label: Steps to reproduce
-      description: Numbered steps
-      placeholder: "1) ...\n2) ..."
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected behavior
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
-    validations:
-      required: true
+      required: false          
   - type: textarea
     id: logs
     attributes:
-      label: Logs / screenshots
-      description: Attach or paste relevant output
-  - type: input
-    id: version
+      label: Relevant log output.
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks. Make sure to NOT INCLUDE any sensitive information or passwords.
+      render: shell      
+  - type: checkboxes
+    id: terms
     attributes:
-      label: Version / commit
-      placeholder: "fabric-jumpstart 0.1.1, commit abc123"
-  - type: dropdown
-    id: severity
-    attributes:
-      label: Severity
+      label: Code of Conduct and Licensing
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Azure/fabric-jumpstart/blob/main/CODE_OF_CONDUCT.md) and the project's [MIT license](https://github.com/microsoft/fabric-jumpstart/blob/main/LICENSE-CODE).
       options:
-        - blocker
-        - critical
-        - major
-        - minor
-        - trivial
-    validations:
-      required: true
+        - label: I agree to follow this project's Code of Conduct and Licensing terms.
+          required: true
