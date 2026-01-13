@@ -7,13 +7,6 @@ body:
   - type: markdown
     attributes:
       value: "Tell us the problem and the desired outcome."
-  - type: input
-    id: title
-    attributes:
-      label: Feature title
-      placeholder: "Add XYZ toggle to jumpstart list"
-    validations:
-      required: true
   - type: textarea
     id: problem
     attributes:
