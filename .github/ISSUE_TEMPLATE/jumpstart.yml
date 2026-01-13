@@ -64,6 +64,15 @@ body:
     attributes:
       label: Motivation
       description: Why this jumpstart is needed; target persona and scenario
+      placeholder: "This jumpstart helps data engineers learn how to..."
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Target audience
+      description: Who this jumpstart is intended for? This should delineate if the Jumpstart is broadly applicable or targeted to a specific scenario, event, etc.
+      placeholder: "This jumpstart is designed for data engineers..."
     validations:
       required: true
   - type: textarea
