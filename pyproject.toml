@@ -4,12 +4,23 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fabric-jumpstart"
-version = "0.1.1"
-description = "Add your description here"
+authors = [{ name = "Microsoft Corporation" }]
+version = "0.1.0"
+description = "Get started quickly with pre-built solutions, tutorials, demos, and accelerators—automated, high-quality, and open-source."
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
-dependencies = [ # temporary until fabric_cicd-0.1.34 is released for SJD / Fabric Auth support
-    "fabric-cicd>=0.1.34",
+requires-python = ">=3.10,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+urls.Repository = "https://github.com/microsoft/fabric-jumpstart.git"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "fabric-cicd==0.1.34",
+    "ipython>=8.20.0",
     "pyyaml>=6.0.3",
 ]
 
@@ -25,8 +36,6 @@ packages = ["src/fabric_jumpstart"]
 dev = [
     {include-group = "lint"},
     {include-group = "test"},
-    "make>=0.1.6.post2",
-    "ipython>=8.20",
 ]
 lint = [
     "ruff>=0.14.10",
