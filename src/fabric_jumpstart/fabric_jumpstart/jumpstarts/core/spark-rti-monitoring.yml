@@ -1,8 +1,8 @@
 id: 4
-logical_id: spark-rti-monitoring
-name: Spark Real-Time Monitoring
+logical_id: fabric-spark-live-monitoring-360
+name: Spark Live Monitoring 360
 description: >-
-  Empower your Spark workloads with real-time monitoring using Fabric Real-Time
+  Empower your Spark workloads with live monitoring using Fabric Real-Time
   Intelligence. Track Spark job performance metrics, visualize data streams on
   live dashboards, and gain operational insights to optimize your data
   engineering pipelines.
@@ -16,7 +16,7 @@ scenario_tags:
 type: Accelerator
 source:
   repo_url: https://github.com/ecotte/fabric-platform-monitoring.git
-  repo_ref: v0.2.4
+  repo_ref: v0.2.5
   workspace_path: spark-monitoring/src/
   preview_image_path: spark-monitoring/image-example.png
 items_in_scope:
