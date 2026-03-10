@@ -1,8 +1,8 @@
 id: 4
-logical_id: fabric-spark-live-monitoring-360
-name: Spark Live Monitoring 360
+logical_id: spark-monitoring-and-optimization
+name: Spark Monitoring and Optimization
 description: >-
-  Empower your Spark workloads with live monitoring using Fabric Real-Time
+  Empower your Spark workloads monitoring using Fabric Real-Time
   Intelligence. Track Spark job performance metrics, visualize data streams on
   live dashboards, and gain operational insights to optimize your data
   engineering pipelines.
